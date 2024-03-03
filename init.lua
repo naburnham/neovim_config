@@ -1,4 +1,4 @@
--- set ',' as the leader key
+-- set '.' as the leader key
 vim.g.mapleader = "."
 vim.g.maplocalleader = "."
 
