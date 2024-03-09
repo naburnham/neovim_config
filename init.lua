@@ -75,13 +75,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = "Move focus to the upper win
 
 
 -- NerdTree Bindings
-vim.keymap.set('n', '<C-g>', ':NERDTreeFocus<CR>', {noremap = true })
 vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>', {noremap = true })
 
 -- Buffer bindings
-
--- Telescope Mappings
-vim.keymap.set('n', '<C-p>', ":Telescope find_files<CR>", {noremap = true })
 
 
 -- [[Vim Plugins]]
@@ -184,6 +180,13 @@ cmp.setup({
 })
 
 -- Telescope Setup
+-- Setup Telescope builtin
+local builtin = require('telescope.builtin')
+-- Telescope Mappings
+vim.keymap.set('n', '<C-p>', builtin.find_files, {noremap = true })
+vim.keymap.set('n', '<C-b>', builtin.buffers, { noremap = true })
+vim.keymap.set('n', '<C-g>', builtin.live_grep, { noremap = true })
+
 local action_state = require('telescope.actions.state')
 require("telescope").setup{
     defaults = {
