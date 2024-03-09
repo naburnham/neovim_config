@@ -98,7 +98,8 @@ Plug ('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make'})
 
 -- Color Scheme Plugs
 -- Plug 'sts10/vim-pink-moon'
-Plug ('luisiacc/gruvbox-baby', { ['branch'] = 'main'})
+-- Plug ('luisiacc/gruvbox-baby', { ['branch'] = 'main'})
+Plug 'dikiaap/minimalist'
 
 -- Mason for LSP
 Plug ('williamboman/mason.nvim', { ['do'] = ':MasonUpdate'} )
@@ -120,9 +121,22 @@ vim.g.NERDTreeDirArrowExpandable="+"
 vim.g.NERDTreeDirArrowCollapsible="-"
 
 -- Color Scheme Settings
-vim.opt.termguicolors = true
-vim.opt.background=dark
-vim.cmd([[colorscheme gruvbox-baby]])
+-- Colorscheme Settings for Vim-Pink-Moon
+-- vim.opt.background=dark
+-- vim.opt.termguicolors = true
+-- vim.cmd([[ colorscheme vim-pink-moon ]])
+
+-- Colorscheme settings for gruvbox-baby
+-- vim.opt.background=dark
+-- vim.cmd([[colorscheme gruvbox-baby]])
+
+-- Colorscheme Settings for minimalist
+vim.cmd([[ set t_Co=256 ]])
+vim.cmd([[ syntax on ]])
+vim.cmd([[ colorscheme minimalist ]])
+-- Airline Status Bar colorscheme
+vim.g.airline_theme='minimalist'
+vim.g.airline_powerline_fonts = 1
 
 -- Package Setups
 require('mason').setup()
