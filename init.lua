@@ -145,6 +145,7 @@ require("mason-lspconfig").setup()
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
+lspconfig.ols.setup {}
 lspconfig.pyright.setup {}
 lspconfig.gopls.setup {
     on_attach = function()
